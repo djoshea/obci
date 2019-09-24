@@ -16,7 +16,7 @@ Separately, the real-time decoder, located within `decoder/`, operates entirely 
 
 ### Communication and control via UDP from Simulink Real-Time task
 
-While the microscope is imaging, information about the behavioral task required by the decoder will be sent to the microscope computer via a separate UDP socket. This bidirectional communication is handled via the class `PrairieStream::SimulinkUdpHandler`. This class will start a polling thread to listen for received data on the UDP stream, which will be parsed within ```c++ SimulinkUdpHandler.handle_receive(...)```. The contents of the data received from the Simulink task will be used to update the current metadata associated with each frame. This metadata is wrapped by the `PrairieStream::ImageMetadata` class:
+While the microscope is imaging, information about the behavioral task required by the decoder will be sent to the microscope computer via a separate UDP socket. This bidirectional communication is handled via the class `PrairieStream::SimulinkUdpHandler`. This class will start a polling thread to listen for received data on the UDP stream, which will be parsed within ```SimulinkUdpHandler.handle_receive(...)```. The contents of the data received from the Simulink task will be used to update the current metadata associated with each frame. This metadata is wrapped by the `PrairieStream::ImageMetadata` class:
 
 ```c++
 class ImageMetadata
@@ -254,3 +254,6 @@ Lastly, we controlled the Simulink Real-Time model, and through it, the operatio
 To use the PrairieControl code, you would need to have PrarieView installed and the PrairieLink DLL registered on your microscope PC. It is possible that the API for PrairieLink may have changed in recent versions requiring changes to the C++ code that interfaces with it. This code was developed largely within Visual Studio, so you can get started by opening the solution file `PrairieLinkBoost.sln`. To build the Cython code, look at `decoder/setup.py`, which includes instructions in the comments at the top of the file. You will need to have built the boost libraries using the Visual Studio toolkit on your PC (easiest from within the VS developer prompt), and then to build the Cython interface from within the Anaconda shell after running the `vcvars32.bat` script as indicated.
 
 As noted above, it is unlikely that you would want to reuse the Simulink Real-Time model, but if you do wish to open the model and look around, you will need to download the [MatUDP toolkit](https://github.com/djoshea/matudp) I've developed and to add its `simulink` folder to the MATLAB path. MatUDP handles the automatic serialization and deserialization of bus types used heavily within the CenterOutReach model, and also includes the automatic trial data logger and UDP-controlled PsychToolbox3 interface the task uses.
+
+Hope you find this helpful!
+Dan
