@@ -1,0 +1,1 @@
+echo EndCycle %*; | "C:\Program Files (x86)\Nmap\ncat".exe -4u 192.168.20.255 10001
