@@ -4,7 +4,9 @@ This repo gathers the code required to implement the real-time two-photon imagin
 
 This code was authored by Daniel J. O'Shea (c) 2017, in conjunction to be used with an imaging system co-developed with Eric Trautmann and Xulu Sun at Stanford under the guidance of Krishna Shenoy, Karl Deisseroth, and Jim Marshel.
 
+<p align="center">
 ![Imaging frame](images/blurred_movie.gif)
+</p>
 
 ## Principles of Operation
 
