@@ -1,0 +1,8 @@
+.vs
+*.pdb
+build
+PrairielinkBoost/x64
+PrairieLinkBoost/Debug
+*.pyd
+*.exe
+
