@@ -2,7 +2,7 @@
 
 This repo gathers the code required to implement the real-time two-photon imaging driven decoder. This work was described in the manuscript posted at bioRxiv at `biorxiv link`.
 
-This code was authored by Daniel J. O'Shea (c) 2017, in conjunction to be used with an imaging system co-developed with Eric Trautmann and Xulu Sun at Stanford under the guidance of Krishna Shenoy, Karl Deisseroth, and Jim Marshel.
+This code was authored by Daniel J. O'Shea (c) 2017, in conjunction to be used with an imaging system co-developed with Eric Trautmann and Xulu Sun at Stanford under the guidance of Krishna Shenoy, Karl Deisseroth, and Jim Marshel. We also thank Michael J. Fox of Bruker Corporation for extraordinary technical guidance which was instrumental to achieving reliable, real-time access to imaging data via PrairieLink.
 
 ![Imaging frame](images/blurred_movie.gif)
 
