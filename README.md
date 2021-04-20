@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4702559.svg)](https://doi.org/10.5281/zenodo.4702559)
 # Code for Optical Brain-Computer-Interface (oBCI) driven by Two-Photon Calcium Imaging
 
 This repo gathers the code required to implement the real-time two-photon imaging driven decoder. This work was described in the manuscript posted at bioRxiv at `biorxiv link`.
